@@ -1,0 +1,17 @@
+# See https://medium.com/@gladevise/accessing-the-hosts-localhost-from-inside-a-docker-container-c5935e275953
+# To install curl
+# apt-get update
+# apt-get install -y curl
+
+# Then run curl to access local host
+# curl http://host.docker.internal:8080/api/v1/quote/getquotelist
+version: '3.8'
+services:
+  ubuntu:
+    image: ubuntu
+    container_name: ubuntu
+    stdin_open: true
+    tty: true
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: bash
