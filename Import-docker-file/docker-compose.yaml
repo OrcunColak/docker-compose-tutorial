@@ -1,6 +1,7 @@
 # See https://faun.pub/import-the-docker-compose-file-into-another-compose-file-4865d7fa0fd4
 # See https://stackoverflow.com/questions/55650342/import-docker-compose-file-in-another-compose-file/76678762#76678762
 
+# Include files that let you divide your docker-compose.yml file into smaller, easier-to-manage chunks.
 include:
   - shared/docker-compose.yaml
   - docker-compose.prod.yaml
